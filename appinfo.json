@@ -1,0 +1,274 @@
+{
+    "appKeys": {
+        "blink": 0,
+        "bluetoothvibe": 2,
+        "datesep": 5,
+        "dayflip": 4,
+        "hour_col": 6,
+        "hourlyvibe": 3,
+        "invert": 1,
+        "min_col": 7
+    },
+    "capabilities": [
+        "configurable"
+    ],
+    "companyName": "markr",
+    "longName": "taller",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/TALLER-NO-BT.png",
+                "name": "IMAGE_BLUETOOTHON",
+                "type": "png"
+            },
+            {
+                "file": "images/sep_mask.png",
+                "name": "IMAGE_SEP_MASK",
+                "type": "png"
+            },
+            {
+                "file": "images/download-taller copy.png",
+                "menuIcon": true,
+                "name": "IMAGE_MENU_ICON",
+                "type": "png"
+            },
+            {
+                "file": "images/separator.png",
+                "name": "IMAGE_SEPARATOR",
+                "type": "png"
+            },
+            {
+                "file": "images/num_0.png",
+                "name": "IMAGE_NUM_0",
+                "type": "png"
+            },
+            {
+                "file": "images/num_1.png",
+                "name": "IMAGE_NUM_1",
+                "type": "png"
+            },
+            {
+                "file": "images/num_2.png",
+                "name": "IMAGE_NUM_2",
+                "type": "png"
+            },
+            {
+                "file": "images/num_3.png",
+                "name": "IMAGE_NUM_3",
+                "type": "png"
+            },
+            {
+                "file": "images/num_4.png",
+                "name": "IMAGE_NUM_4",
+                "type": "png"
+            },
+            {
+                "file": "images/num_5.png",
+                "name": "IMAGE_NUM_5",
+                "type": "png"
+            },
+            {
+                "file": "images/num_6.png",
+                "name": "IMAGE_NUM_6",
+                "type": "png"
+            },
+            {
+                "file": "images/num_7.png",
+                "name": "IMAGE_NUM_7",
+                "type": "png"
+            },
+            {
+                "file": "images/num_8.png",
+                "name": "IMAGE_NUM_8",
+                "type": "png"
+            },
+            {
+                "file": "images/num_9.png",
+                "name": "IMAGE_NUM_9",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-sunday.png",
+                "name": "IMAGE_DAY_NAME_SUN",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-thursday.png",
+                "name": "IMAGE_DAY_NAME_THU",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-monday.png",
+                "name": "IMAGE_DAY_NAME_MON",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-tuesday.png",
+                "name": "IMAGE_DAY_NAME_TUE",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-wednesday.png",
+                "name": "IMAGE_DAY_NAME_WED",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-friday.png",
+                "name": "IMAGE_DAY_NAME_FRI",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-saturday.png",
+                "name": "IMAGE_DAY_NAME_SAT",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-2.png",
+                "name": "IMAGE_DATENUM_2",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-1.png",
+                "name": "IMAGE_DATENUM_1",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-4.png",
+                "name": "IMAGE_DATENUM_4",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-3.png",
+                "name": "IMAGE_DATENUM_3",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-5.png",
+                "name": "IMAGE_DATENUM_5",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-6.png",
+                "name": "IMAGE_DATENUM_6",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-7.png",
+                "name": "IMAGE_DATENUM_7",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-8.png",
+                "name": "IMAGE_DATENUM_8",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-9.png",
+                "name": "IMAGE_DATENUM_9",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-0.png",
+                "name": "IMAGE_DATENUM_0",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-friday2.png",
+                "name": "IMAGE_DAY_NAME_FRI2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-thursday (2)b.png",
+                "name": "IMAGE_DAY_NAME_THU2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-wednesday (1)b.png",
+                "name": "IMAGE_DAY_NAME_WED2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-tuesday (1)b.png",
+                "name": "IMAGE_DAY_NAME_TUE2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-monday (1)b.png",
+                "name": "IMAGE_DAY_NAME_MON2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-sunday (1)b.png",
+                "name": "IMAGE_DAY_NAME_SUN2",
+                "type": "png"
+            },
+            {
+                "file": "images/visitor-saturday (1)b.png",
+                "name": "IMAGE_DAY_NAME_SAT2",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-0b.png",
+                "name": "IMAGE_DATENUM_0B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-1b.png",
+                "name": "IMAGE_DATENUM_1B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-2b.png",
+                "name": "IMAGE_DATENUM_2B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-3 (1)b.png",
+                "name": "IMAGE_DATENUM_3B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-4b.png",
+                "name": "IMAGE_DATENUM_4B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-5b.png",
+                "name": "IMAGE_DATENUM_5B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-6b.png",
+                "name": "IMAGE_DATENUM_6B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-7b.png",
+                "name": "IMAGE_DATENUM_7B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-8b.png",
+                "name": "IMAGE_DATENUM_8B",
+                "type": "png"
+            },
+            {
+                "file": "images/movie-rotated-9b.png",
+                "name": "IMAGE_DATENUM_9B",
+                "type": "png"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "taller",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "597ff39d-f802-42e4-9148-eed9267b24fe",
+    "versionLabel": "2.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
