@@ -4,6 +4,7 @@
         "bluetoothvibe": 2,
         "datesep": 5,
         "dayflip": 4,
+        "font": 8,
         "hour_col": 6,
         "hourlyvibe": 3,
         "invert": 1,
@@ -12,11 +13,61 @@
     "capabilities": [
         "configurable"
     ],
-    "companyName": "markr",
+    "companyName": "chops",
     "longName": "taller",
     "projectType": "native",
     "resources": {
         "media": [
+            {
+                "file": "images/anum_9.png",
+                "name": "IMAGE_NUM2_9",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_8.png",
+                "name": "IMAGE_NUM2_8",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_7.png",
+                "name": "IMAGE_NUM2_7",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_6.png",
+                "name": "IMAGE_NUM2_6",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_5.png",
+                "name": "IMAGE_NUM2_5",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_4.png",
+                "name": "IMAGE_NUM2_4",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_3.png",
+                "name": "IMAGE_NUM2_3",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_2.png",
+                "name": "IMAGE_NUM2_2",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_1.png",
+                "name": "IMAGE_NUM2_1",
+                "type": "png"
+            },
+            {
+                "file": "images/anum_0.png",
+                "name": "IMAGE_NUM2_0",
+                "type": "png"
+            },
             {
                 "file": "images/TALLER-NO-BT.png",
                 "name": "IMAGE_BLUETOOTHON",
@@ -267,7 +318,7 @@
         "basalt"
     ],
     "uuid": "597ff39d-f802-42e4-9148-eed9267b24fe",
-    "versionLabel": "2.0",
+    "versionLabel": "2.2",
     "watchapp": {
         "watchface": true
     }

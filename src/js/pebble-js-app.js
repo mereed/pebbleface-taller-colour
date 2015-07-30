@@ -32,6 +32,7 @@ function saveLocalData(config) {
   localStorage.setItem("datesep", parseInt(config.datesep)); 
   localStorage.setItem("hour_col", parseInt(config.hour_col)); 
   localStorage.setItem("min_col", parseInt(config.min_col)); 
+  localStorage.setItem("font", parseInt(config.font)); 
   
   loadLocalData();
 
@@ -46,6 +47,7 @@ function loadLocalData() {
 	mConfig.datesep = parseInt(localStorage.getItem("datesep"));
 	mConfig.hour_col = parseInt(localStorage.getItem("hour_col"));
 	mConfig.min_col = parseInt(localStorage.getItem("min_col"));
+	mConfig.font = parseInt(localStorage.getItem("font"));
 	mConfig.configureUrl = "http://www.themapman.com/pebblewatch/tallerconfig20.html";
 
 	if(isNaN(mConfig.blink)) {
@@ -72,6 +74,9 @@ function loadLocalData() {
 	if(isNaN(mConfig.min_col)) {
 		mConfig.min_col = 0;
 	}
+	if(isNaN(mConfig.font)) {
+		mConfig.font = 0;
+	}
   //console.log("loadLocalData() " + JSON.stringify(mConfig));
 }
 function returnConfigToPebble() {
@@ -85,5 +90,6 @@ function returnConfigToPebble() {
     "datesep":parseInt(mConfig.datesep),
     "hour_col":parseInt(mConfig.hour_col),
     "min_col":parseInt(mConfig.min_col),
+    "font":parseInt(mConfig.font)
   });    
 }

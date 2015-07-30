@@ -32,6 +32,7 @@ static int dayflip;
 static int datesep;
 static int hour_col;
 static int min_col;
+static int font;
 
 static bool appStarted = false;
 
@@ -43,7 +44,8 @@ enum {
   DAYFLIP_KEY = 0x4,
   DATESEP_KEY = 0x5,
   HOUR_COL_KEY = 0x6,
-  MIN_COL_KEY = 0x7
+  MIN_COL_KEY = 0x7,
+  FONT_KEY = 0x8
 };
 
 	// initializing colors
@@ -141,6 +143,22 @@ const int BIG_DIGIT_IMAGE_RESOURCE_IDS[] = {
   RESOURCE_ID_IMAGE_NUM_9
 };
 
+#define TOTAL_TIME_DIGITS2 4
+static GBitmap *time_digits_images[TOTAL_TIME_DIGITS2];
+static BitmapLayer *time_digits_layers[TOTAL_TIME_DIGITS];
+
+const int BIG_DIGIT2_IMAGE_RESOURCE_IDS[] = {
+  RESOURCE_ID_IMAGE_NUM2_0,
+  RESOURCE_ID_IMAGE_NUM2_1,
+  RESOURCE_ID_IMAGE_NUM2_2,
+  RESOURCE_ID_IMAGE_NUM2_3,
+  RESOURCE_ID_IMAGE_NUM2_4,
+  RESOURCE_ID_IMAGE_NUM2_5,
+  RESOURCE_ID_IMAGE_NUM2_6,
+  RESOURCE_ID_IMAGE_NUM2_7,
+  RESOURCE_ID_IMAGE_NUM2_8,
+  RESOURCE_ID_IMAGE_NUM2_9
+};
 
 
 void change_hour() {
@@ -432,7 +450,6 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 		hour_col = new_tuple->value->uint8;
 		persist_write_bool(HOUR_COL_KEY, hour_col);
 	    change_hour();
-	    window_stack_push(window, true /* Animated */);
 
 	break;
 	  
@@ -440,10 +457,38 @@ static void sync_tuple_changed_callback(const uint32_t key, const Tuple* new_tup
 		min_col = new_tuple->value->uint8;
 		persist_write_bool(MIN_COL_KEY, min_col);
 		change_min();
-	  	window_stack_push(window, true /* Animated */);
+	  	//window_stack_push(window, true /* Animated */);
 
 	break;
+	  
+	case FONT_KEY:
+		font = new_tuple->value->uint8 !=0;
+		persist_write_bool(FONT_KEY, font);
+		
+if (font) {
+	
+	//	for (int i = 0; i < TOTAL_TIME_DIGITS; ++i) {
+	//	layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[i]), true);
+	//	}
+	
+} else {
+	
+	//	for (int i = 0; i < TOTAL_TIME_DIGITS; ++i) {
+	//	layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[i]), false);
+	//	}
+
+}
+	break;
   }
+  // Refresh display
+
+    // Get current time
+  time_t now = time( NULL );
+  struct tm *tick_time = localtime( &now );
+
+  // Force update to avoid a blank screen at startup of the watchface
+  handle_tick( tick_time, MINUTE_UNIT );
+	
 }
 
 static void set_container_image(GBitmap **bmp_image, BitmapLayer *bmp_layer, const int resource_id, GPoint origin) {
@@ -511,8 +556,8 @@ static void update_hours(struct tm *tick_time) {
   set_container_image(&time_digits_images[1], time_digits_layers[1], BIG_DIGIT_IMAGE_RESOURCE_IDS[display_hour%10], GPoint(33, 7));
 
 	if (!clock_is_24h_style()) {
-    if (tick_time->tm_hour >= 12) {
-	}
+   //   if (tick_time->tm_hour >= 12) {
+	//}
 	
     if (display_hour/10 == 0) {
       layer_set_hidden(bitmap_layer_get_layer(time_digits_layers[0]), true);
@@ -541,6 +586,7 @@ static void handle_tick(struct tm *tick_time, TimeUnits units_changed) {
   }	
 		
 }
+
 
 static void init(void) {
   memset(&time_digits_layers, 0, sizeof(time_digits_layers));
@@ -648,6 +694,7 @@ static void init(void) {
     TupletInteger(DATESEP_KEY, persist_read_bool(DATESEP_KEY)),
 	TupletInteger(HOUR_COL_KEY, persist_read_bool(HOUR_COL_KEY)),
 	TupletInteger(MIN_COL_KEY, persist_read_bool(MIN_COL_KEY)),
+	TupletInteger(FONT_KEY, persist_read_bool(FONT_KEY)),
   };
   
   app_sync_init(&sync, sync_buffer, sizeof(sync_buffer), initial_values, ARRAY_LENGTH(initial_values),
